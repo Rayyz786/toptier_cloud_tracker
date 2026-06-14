@@ -1,0 +1,32 @@
+name: 24/7 Cloud Hardware Tracker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  execute-monitor:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Source Code Workspace
+      uses: actions/checkout@v4
+
+    - name: Initialize Standard Python Runtime
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Provision Core Application System Dependencies
+      run: |
+        pip install requests playwright
+        playwright install chromium
+
+    - name: Run Declarative Serverless Monitoring Target Loop
+      env:
+        APP_NOTIFY_TOKEN: ${{ secrets.APP_NOTIFY_TOKEN }}
+        APP_NOTIFY_USER: ${{ secrets.APP_NOTIFY_USER }}
+        OUTBOUND_PROXY_SERVER: ${{ secrets.OUTBOUND_PROXY_SERVER }}
+        OUTBOUND_PROXY_USER: ${{ secrets.OUTBOUND_PROXY_USER }}
+        OUTBOUND_PROXY_PASS: ${{ secrets.OUTBOUND_PROXY_PASS }}
+      run: python cloud_track.py
