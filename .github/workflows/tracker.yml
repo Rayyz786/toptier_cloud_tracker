@@ -29,4 +29,6 @@ jobs:
         OUTBOUND_PROXY_SERVER: ${{ secrets.OUTBOUND_PROXY_SERVER }}
         OUTBOUND_PROXY_USER: ${{ secrets.OUTBOUND_PROXY_USER }}
         OUTBOUND_PROXY_PASS: ${{ secrets.OUTBOUND_PROXY_PASS }}
+        METRIC_VALUE_LIMIT: ${{ secrets.METRIC_VALUE_LIMIT }}
+
       run: python cloud_track.py
