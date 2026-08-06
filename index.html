@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahim Lakhani | Cloud & DevOps Portfolio</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; backgroundColor: #f9f9f9; }
+        h1 { color: #111; border-bottom: 2px solid #eaecef; padding-bottom: 10px; margin-bottom: 5px; }
+        h2 { color: #222; border-bottom: 1px solid #eaecef; padding-bottom: 5px; margin-top: 30px; }
+        .subtitle { font-size: 1.2rem; color: #666; margin-top: 0; margin-bottom: 30px; font-weight: 400; }
+        code { background-color: #f6f8fa; padding: 2px 6px; border-radius: 3px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 85%; }
+        pre { background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow: auto; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 85%; border: 1px solid #e1e4e8; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .badge { background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-right: 5px; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Rahim Lakhani</h1>
+    <p class="subtitle">DevOps & Cloud Infrastructure Engineer Portfolio</p>
+
+    <h2>Event-Driven Serverless E-Commerce Inventory Monitoring Engine</h2>
+    <p>A production-grade, event-driven serverless architecture designed to perform low-latency, automated data scraping across targeted retail API endpoints. This framework optimizes inventory change discovery while programmatically evading advanced edge-network bot mitigations.</p>
+
+    <h3>🏛️ Architectural Overview</h3>
+    <p>The infrastructure leverages a fully decoupled, serverless orchestration layer to execute high-frequency data extraction pipelines with minimal resource consumption:</p>
+    <ul>
+        <li><strong>Orchestration Layer:</strong> Amazon EventBridge schedules automated triggers at strict high-frequency intervals.</li>
+        <li><strong>Compute Layer:</strong> Containerized Python runtimes execute headlessly inside AWS Lambda to isolate and process target DOM hierarchies without environment persistence.</li>
+        <li><strong>Anonymization Module:</strong> Outbound browser instances orchestrate programmatic network hops through authenticated residential proxy nodes, bypassing Cloudflare/Akamai anti-scraping blocks.</li>
+        <li><strong>Ingress Alerting Gateway:</strong> Verified state changes trigger real-time HTTP POST payload handshakes to mobile push notification APIs for immediate edge notification.</li>
+    </ul>
+
+    <h3>🛠️ Tech Stack & Capabilities</h3>
+    <div>
+        <span class="badge">Infrastructure as Code: Terraform</span>
+        <span class="badge">AWS Lambda</span>
+        <span class="badge">Amazon EventBridge</span>
+        <span class="badge">CI/CD: GitHub Actions</span>
+        <span class="badge">Browser Virtualization: Playwright</span>
+        <span class="badge">Runtime: Python 3.10</span>
+    </div>
+
+    <h3>🚀 Local Initialization</h3>
+    <p>1. Configure the Infrastructure Environment</p>
+    <p>Initialize the local working state and verify configuration definitions:</p>
+    <pre>terraform init
+terraform validate</pre>
+
+    <p>2. Run the Headless Scraper Context</p>
+    <p>Ensure local environment injections are securely bound to your shell runtime profile:</p>
+    <pre>export APP_NOTIFY_TOKEN="your_token"
+export APP_NOTIFY_USER="your_user"
+python3 cloud_track.py</pre>
+
+    <h3>🔒 Security & Least Privilege Design</h3>
+    <p>This platform adheres to absolute strict zero-trust security strategies. No long-lived cloud master keys, application access tokens, or connection credentials are hardcoded into the codebase. All runtime credentials pass dynamically into the execution context using encrypted environment variables via GitHub Actions Secrets and AWS Lambda Environment Blocks.</p>
+
+</body>
+</html>
